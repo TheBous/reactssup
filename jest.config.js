@@ -16,7 +16,9 @@ module.exports = {
     ],
     "testMatch": [
         "<rootDir>/__tests__/**/?(*.)test.ts",
-        "<rootDir>/__tests__/**/?(*.)test.tsx"
+        "<rootDir>/__tests__/**/?(*.)test.tsx",
+        "<rootDir>/src/**/?(*.)test.ts",
+        "<rootDir>/src/**/?(*.)test.tsx"
     ],
     "coverageThreshold": {
         "global": {
