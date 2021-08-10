@@ -23,6 +23,7 @@ cypress/screenshots
 cypress/logs
 cypress.json
 coverage
+__tests__
 
 #stats
 stats.html
