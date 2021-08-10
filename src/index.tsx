@@ -1,3 +1,5 @@
-import "./scss/index.scss";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./ts/components/App";
 
-console.log("Bootstraping application..."); const c = "ciao"; const a = 2;
+ReactDOM.render(<App />, document.getElementById("app"));

@@ -14,10 +14,8 @@ package-lock.json
 .idea
 babel_cache
 node_modules
-dist
-build
-public/css
-public/js
+build/*.js
+build/*.css
 logs
 
 #tests
@@ -25,6 +23,3 @@ cypress/screenshots
 cypress/logs
 cypress.json
 coverage
-
-#typescript
-build/types

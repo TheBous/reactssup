@@ -19,6 +19,8 @@
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
     "@rollup/plugin-typescript": "^8.2.5",
+    "@types/react": "^17.0.16",
+    "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
     "eslint": "^7.32.0",
@@ -27,6 +29,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.56.2",
     "rollup-plugin-analyzer": "^4.0.0",
@@ -53,6 +56,7 @@
     }
   },
   "scripts": {
+    "prettier": "pretty-quick",
     "build": "cross-env NODE_ENV=production rollup -c",
     "start": "rollup -cw",
     "commit": "npx git-cz",
@@ -66,5 +70,9 @@
     "skip": {
       "bump": true
     }
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
