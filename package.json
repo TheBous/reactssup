@@ -19,10 +19,11 @@
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
     "@rollup/plugin-typescript": "^8.2.5",
+    "@types/enzyme": "^3.10.9",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.16",
     "@types/react-dom": "^17.0.9",
-    "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
     "enzyme": "^3.11.0",
@@ -73,7 +74,7 @@
     "release": "npm run build && npx np",
     "lint": "eslint ./src",
     "test": "jest",
-    "test:watch": "jest --watch",
+    "test:clearCache": "jest --clearCache",
     "coverage": "jest --coverage"
   },
   "standard-version": {
