@@ -6,16 +6,14 @@ import serve from "rollup-plugin-serve";
 import typescript from '@rollup/plugin-typescript';
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
-import sass from "rollup-plugin-sass";
-import autoprefixer from "autoprefixer";
-import postcss from "postcss";
+import scss from "rollup-plugin-scss";
 import analyze from "rollup-plugin-analyzer";
 import visualizer from "rollup-plugin-visualizer";
 
 const NODE_ENV = process.env.NODE_ENV || "development";
 
 export default {
-  input: "./src/index.ts",
+  input: "./src/index.tsx",
   output: [
     {
       file: "./build/bundle.umd.js",
@@ -37,6 +35,10 @@ export default {
     },
   ],
   plugins: [
+    scss({
+      output: "./build/css/style.css",
+      failOnError: true,
+    }),
     typescript(),
     replace({
       preventAssignment: true,
@@ -47,13 +49,6 @@ export default {
     }),
     resolve(),
     commonjs(),
-    sass({
-      output: "build/bundle.css",
-      processor: (css) =>
-        postcss([autoprefixer])
-          .process(css)
-          .then((result) => result.css),
-    }),
     NODE_ENV !== "production" && serve({ contentBase: "build" }),
     NODE_ENV !== "production" && livereload(),
     NODE_ENV !== "production" && analyze(),
