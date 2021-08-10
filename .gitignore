@@ -1,0 +1,30 @@
+.DS_Store
+
+# Node build artifacts
+node_modules
+npm-debug.log
+yarn-error.log
+newrelic_agent.log
+package-lock.json
+
+# Local development
+.env
+.env.test
+.env.devl
+.idea
+babel_cache
+node_modules
+dist
+build
+public/css
+public/js
+logs
+
+#tests
+cypress/screenshots
+cypress/logs
+cypress.json
+coverage
+
+#typescript
+build/types
