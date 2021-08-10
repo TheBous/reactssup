@@ -36,7 +36,7 @@ export default {
   ],
   plugins: [
     scss({
-      output: "./build/css/style.css",
+      output: "./build/style.css",
       failOnError: true,
     }),
     typescript(),
