@@ -1,26 +1,13 @@
 {
-    "compilerOptions": {
-      "target": "es2017",
-      "lib": ["dom", "dom.iterable", "esnext"],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "noFallthroughCasesInSwitch": true,
-      "module": "esnext",
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "noEmit": false,
-      "jsx": "react",
-      "experimentalDecorators": true,
-      "removeComments": true,
-      "declaration": true,
-      "declarationDir": "build/types",
-      "baseUrl": "src",
-    },
-    "include": ["./__tests__"],
-    "exclude": ["node_modules", "build", "src"]
-  }
-  
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/src/test",
+    "noEmit": false,
+    "lib": ["ES2020", "dom"],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "strict": false,
+  },
+  "include": ["src/test/**/*.test.tsx", "src/test/**/*.test.ts", "__tests__/**/*.test.tsx"],
+  "exclude": ["node_modules"]
+}

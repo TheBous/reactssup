@@ -37,5 +37,8 @@ module.exports = {
         '\\.ts$': 'ts-jest',
         '\\.tsx$': 'ts-jest',
         "^.+\\.js$": "babel-jest"
-    }
+    },
+    "setupFilesAfterEnv": [
+        "<rootDir>/setuptests.ts"
+      ]
 }

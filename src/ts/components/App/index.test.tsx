@@ -1,26 +1,26 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
-import { configure, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import { render } from "@testing-library/react";
 
 import App, { Title } from "../App";
 
-configure({ adapter: new Adapter() });
-
 describe("<App />", () => {
-    const app = shallow(<App />);
+    const {container: app} = render(<App />);
     test("App matches the snapshot", () => {
         expect(app).toMatchSnapshot();
     });
-    
-    test("App contains a span with the right title", () => {
-        expect(app.find("span").text()).toBe("This is a boilerplate")
+    test("App text expected to be the correct one", () => {
+        const { getByText } = render(<App />)
+        expect(getByText("This is a boilerplate")).toBeInTheDocument()
     });
 });
 
 describe("<Title />", () => {
-    const title = shallow(<Title text="hey" />);
     test("App matches the snapshot", () => {
-        expect(title).toMatchSnapshot();
-        expect(title.instance().props.text).toBe("hey")
+        const { container, getByText } = render(<Title text="text" />)
+        expect(getByText("text")).toBeInTheDocument()
     });
 });
