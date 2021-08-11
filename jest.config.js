@@ -4,7 +4,7 @@ module.exports = {
     ],
     "globals": {
         "ts-jest": {
-            "tsConfigFile": "tsconfig.test.json"
+            "tsconfig": "tsconfig.test.json"
         },
         "google": {}
     },
@@ -34,8 +34,8 @@ module.exports = {
         "tsx"
     ],
     "transform": {
-        "\\.(ts)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
-        "\\.(tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+        '\\.ts$': 'ts-jest',
+        '\\.tsx$': 'ts-jest',
         "^.+\\.js$": "babel-jest"
     }
 }
