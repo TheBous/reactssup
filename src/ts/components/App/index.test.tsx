@@ -5,7 +5,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 
-import App, { Title } from "../App";
+import App from "../App";
 
 describe("<App />", () => {
     const {container: app} = render(<App />);
@@ -15,14 +15,6 @@ describe("<App />", () => {
     test("App text expected to be the correct one", () => {
         const { getByText } = render(<App />)
         expect(getByText("This is a boilerplate")).toBeInTheDocument()
-    });
-});
-
-describe("<Title />", () => {
-    test("App matches the snapshot", () => {
-        const { container, getByText, debug } = render(<Title text="text" />)
-        debug();
-        expect(getByText("text")).toBeInTheDocument()
     });
 });
 

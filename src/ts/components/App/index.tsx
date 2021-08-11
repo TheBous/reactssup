@@ -1,14 +1,8 @@
 import React, { useState, FC } from "react"; 
-
-export interface IProps {
-    text: string;
-}
-
-export const Title: FC<IProps> = ({text}) => <div>{text}</div>
+import Title from "../Title";
 
 const App: FC = (): JSX.Element => {
     const [showH1, setH1Visibility] = useState<boolean>(false);
-
     const toggleH1 = (): void => setH1Visibility((oldH1Visibility) => !oldH1Visibility);
 
     return (
