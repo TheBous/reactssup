@@ -1,5 +1,6 @@
 import React, { useState, FC } from "react"; 
 import Title from "../Title";
+import List from "../List";
 
 const App: FC = (): JSX.Element => {
     const [showH1, setH1Visibility] = useState<boolean>(false);
@@ -10,6 +11,7 @@ const App: FC = (): JSX.Element => {
             {showH1 && <h1 data-testid="title">Reactssup title</h1>}
             <span>This is a boilerplate</span>
             <Title text="Example test" />
+            <List />
             <button onClick={toggleH1} data-testid="button">Button</button>
         </div>
     )
